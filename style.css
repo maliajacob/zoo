@@ -1,19 +1,31 @@
 body {
-    background-color: beige;
-    
+    background-image: url(zoo_720.jpg);
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
 
-form {
-    background-color: rgb(211, 153, 83);
+div > img {
+    display: flex;
+    justify-content: flex-start;
     width: 300px;
-    padding: 30px;
-    
+}
+
+@keyframes fadeIn {
+    0% { opacity: .1; }
+    100% { opacity: 1; }
+}
+
+div.marty {
+    display: block;
+    animation: fadeIn 10s;
+    animation-iteration-count: infinite;
 }
 
 div {
     display: flex;
     justify-content: center;
-    margin: 100px;
+    margin: 10px;
 }
 
 h1 {
@@ -21,11 +33,75 @@ h1 {
     justify-content: center;
 }
 
-.bounce {
-    width: 50px;
-    height: 50px;
-    background-color: lightseagreen;
-    border-radius: 50%;
-    position: relative;
-    animation: bounce 2s infinite;
+form {
+    background-color: rgb(211, 153, 83);
+    width: 260px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#fname, #lname, #email{
+    width: 230px;
+    border-radius: 3px;
+    background-color: bisque;
+    padding: 8px 10px;
+}
+
+.center-piece {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 150px;
+}
+
+#submit {
+    border-radius: 3px;
+    background-color: #dadfea;
+}
+
+
+
+
+
+
+.monkey {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    height: 120px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin {
+    100% { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+
+
+
+.giraffe {
+    position: fixed;
+    bottom: 500px;
+    right: 50px;
+    width: 120px;
+    height: 120px;  -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 2s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
 }
