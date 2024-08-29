@@ -3,7 +3,7 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
-}
+    background-size: cover;}
 
 div > img {
     display: flex;
@@ -16,11 +16,12 @@ div > img {
     100% { opacity: 1; }
 }
 
-div.marty {
+.marty {
     display: block;
     animation: fadeIn 10s;
     animation-iteration-count: infinite;
 }
+
 
 div {
     display: flex;
@@ -58,7 +59,9 @@ form {
     border-radius: 3px;
     background-color: #dadfea;
 }
-
+ .padding {
+    padding: 100px;
+ }
 
 
 
